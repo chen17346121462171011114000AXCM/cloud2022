@@ -3,13 +3,16 @@ package com.cst.springcloud.service.impl;
 import com.cst.springcloud.dao.PaymentDao;
 import com.cst.springcloud.entities.Payment;
 import com.cst.springcloud.service.PaymentService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 @Service
 public class PaymentServiceImpl implements PaymentService {
 
-    @Autowired
+    @Resource
     private PaymentDao paymentDao;
 
     @Override
